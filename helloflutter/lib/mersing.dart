@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Mersing extends StatelessWidget{
   @override
-  Widget build(){
+  Widget build(BuildContext context){
     return new Container(
       margin: const EdgeInsets.all(10.0),
       padding: EdgeInsets.all(10.0),

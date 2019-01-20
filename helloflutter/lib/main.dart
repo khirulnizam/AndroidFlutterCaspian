@@ -35,10 +35,9 @@ class MyApp extends StatelessWidget{
 
               new Row(
                 children: <Widget>[
-                  new Column(
-                     Mersing(),
-                  ),
-                  new Column(),
+                  Mersing(),
+                  Mersing(),
+
                 ],
               )
             ],
