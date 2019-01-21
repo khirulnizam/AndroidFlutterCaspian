@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Navigate Demo',
       theme: ThemeData(
         
         primarySwatch: Colors.blue,
@@ -22,7 +22,21 @@ class PageOne extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     //our code
-    return Scaffold();
+    return Scaffold(
+      appBar: new AppBar(title: new Text('Page One'),),
+      body: new Center(
+        //elements here
+        child: RaisedButton(
+          onPressed: (){
+            print('Tekan ke Laman2');
+            //navigate to PageTwo
+            Navigator.push(context, 
+              MaterialPageRoute(builder: (context)=> PageTwo())
+            );
+          }
+        )
+      ),
+    );
   }//end Widget
 
 }//end PageOne
@@ -32,7 +46,20 @@ class PageTwo extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     //our code
-    return Scaffold();
+    return Scaffold(
+      appBar: new AppBar(title: new Text('Laman2'),),
+      body: new Center(
+        //elements here
+        child: RaisedButton(
+          onPressed: (){
+            print('Tekan ke Laman1');
+            //navigate to PageTwo
+            Navigator.pop(context);
+            child: new Text('Balik ke Laman1');
+          }
+        )
+      ),
+    );
   }//end Widget
 
 }//end PageTwo
