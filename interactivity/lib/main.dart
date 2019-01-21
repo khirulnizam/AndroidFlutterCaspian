@@ -35,9 +35,21 @@ class _MyCustomFormState extends State<MyCustomForm>{
 
   @override
   Widget build(BuildContext context){
-    return new Scaffold();
+    return new Scaffold(
+      //UIs TextField, Button
+      appBar: AppBar(title: Text('Retrieving data'),),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: TextField(controller: myController,),
+      ),
+    );
   }
 }//end _MyCustomFormState
+
+
+
+//-------------------------------------------------------------------------
+//existing code template
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
