@@ -1,5 +1,6 @@
+//[code]
 import 'package:flutter/material.dart';
-import 'mersing.dart';
+import 'mersing.dart';//include dart file
 
 void main () => runApp (MyApp());
 
@@ -47,3 +48,5 @@ class MyApp extends StatelessWidget{
     );
   }//end Widget
 }//end class
+
+//[/code]

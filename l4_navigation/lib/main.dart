@@ -7,74 +7,42 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'L3: Stateful & Interactivity',
+      title: 'Flutter Demo',
       theme: ThemeData(
+        
         primarySwatch: Colors.blue,
       ),
-      home: MyCustomForm(),
+      home: PageOne(),
     );
   }
 }
 
-// to create statefull widget 
-// (statefull means with data stored)
-class MyCustomForm extends StatefulWidget{
-  //create a state
-  _MyCustomFormState createState()=> _MyCustomFormState();
-
-}//end MyCustomForm
-
-class _MyCustomFormState extends State<MyCustomForm>{
-  final myController = TextEditingController();
-  //return ();
-
-  void dispose(){
-    myController.dispose();
-    super.dispose();//to dispose off widget in memory
-  }//end dispose
-
+//class PageOne
+class PageOne extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return new Scaffold(
-      //UIs TextField, Button
-      appBar: AppBar(title: Text('Retrieving data'),),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: TextField(controller: myController,),
-      ),
+    //our code
+    return Scaffold();
+  }//end Widget
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          return showDialog(
-            context: context,
-            builder: (context){
-              return AlertDialog(
-                title: Text('Display textfield value'),
-                content: SingleChildScrollView(
-                  child: ListBody(
-                    children: <Widget>[
-                      Text('Hello Flutter.'),
-                      Text(myController.text),
-                    ],
-                  ),
-                ),
-              );
-            }
-          );
-        },
-        tooltip: 'Show me the value!',
-        child: Icon(Icons.text_fields),
-      ),
-    );
-  }
-}//end _MyCustomFormState
+}//end PageOne
+
+//class PageTwo
+class PageTwo extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    //our code
+    return Scaffold();
+  }//end Widget
+
+}//end PageTwo
 
 
 
 
 
-//-------------------------------------------------------------------------
-//existing code template
+
+//--------------------------- existing template
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
