@@ -18,6 +18,7 @@ class _PageTwoState extends State<PageTwo>{
         //elements here
         child: new Column(
           children: <Widget>[
+            //capture data from value
             new Text ("${widget.value}"),
             new RaisedButton(
               child: const Text('Pergi ke Laman2'),
