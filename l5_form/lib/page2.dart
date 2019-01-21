@@ -1,8 +1,14 @@
 //class PageTwo
 import 'package:flutter/material.dart';
-import 'page3.dart';
-import 'page2.dart';
-class PageOne extends StatelessWidget{
+//import 'page2.dart';
+class PageTwo extends StatefulWidget{
+  final String value;
+  PageTwo ({Key key, this.value}):super (key: key);
+  @override
+  _PageTwoState createState() => new _PageTwoState();
+}
+
+class _PageTwoState extends State<PageTwo>{
   @override
   Widget build(BuildContext context){
     //our code
@@ -12,6 +18,7 @@ class PageOne extends StatelessWidget{
         //elements here
         child: new Column(
           children: <Widget>[
+            new Text ("${widget.value}"),
             new RaisedButton(
               child: const Text('Pergi ke Laman2'),
               onPressed: (){
@@ -24,19 +31,6 @@ class PageOne extends StatelessWidget{
             
               }
             ), //RaisedButton to p1
-
-            new RaisedButton(
-              child: const Text('Pergi ke Laman3'),
-              onPressed: (){
-            
-                //navigate to PageThree by router
-                Navigator.of(context).pushNamed('/page3');
-                //Navigator.push(context, 
-                //  MaterialPageRoute(builder: (context)=> PageThree())
-                //);
-            
-              }
-            ), //RaisedButton to p3
         
           ],
         ),

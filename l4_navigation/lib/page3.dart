@@ -16,7 +16,8 @@ class PageThree extends StatelessWidget{
           onPressed: (){
             
             //navigate to PageTwo
-            Navigator.pop(context);
+            //for last page
+            Navigator.of(context).pushNamedAndRemoveUntil('/page2',(Route<dynamic> route)=> false);
             
           }
         )
